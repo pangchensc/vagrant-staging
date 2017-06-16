@@ -1,15 +1,17 @@
-# Ansible 3 Nodes
+# Ansible 4 Nodes
 ----
 
-This Vagrantfile config will provision 3 CentOS VMs with Ansible installed on the master. 
+This Vagrantfile config will provision 4 Linux VMs with Ansible installed on the master. 
 
 The goal is to provide fresh test beds for Ansible playbooks without having to install Ansible on your host machine.
 
 Master - Ansible management node
 
-Node 1 - Regular VM
+Centos 1 - Regular VM
 
-Node 2 - Regular VM
+Centos 2 - Regular VM
+
+Ubuntu 1 - Regular VM
 
 ----
 
