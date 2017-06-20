@@ -7,9 +7,10 @@ echo 'Host *' >> /home/vagrant/.ssh/config
 echo 'StrictHostKeyChecking no' >> /home/vagrant/.ssh/config
 echo 'UserKnownHostsFile /dev/null' >> /home/vagrant/.ssh/config
 sudo chown -R vagrant:vagrant /home/vagrant/.ssh
-chmod 600 /home/vagrant/.ssh/config
-chmod 600 /home/vagrant/.ssh/authorized_keys
-chmod 600 /home/vagrant/.ssh/id_rsa
+chmod -R 600 /home/vagrant/.ssh/config
+chmod -R 600 /home/vagrant/.ssh/id_rsa
+chmod -R 644 /home/vagrant/.ssh/authorized_keys
+chown vagrant:vagrant .ssh/config
 
 # Setup hostfile
 
