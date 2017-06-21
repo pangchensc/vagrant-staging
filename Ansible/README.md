@@ -29,4 +29,8 @@ Done!
 
 # Note
 
-By default, this Vagrantfile can provision up to any amount nodes specify in NODE_COUNT; however, inventory file will need to be modified on master.
+- By default, this Vagrantfile can provision up to any amount nodes specify in NODE_COUNT; however, inventory file will need to be modified on master.
+
+- Centos VM will need be rebooted manually for new Selinux policy to take affect
+
+
