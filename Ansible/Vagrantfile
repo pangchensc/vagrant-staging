@@ -42,13 +42,15 @@ Vagrant.configure("2") do |config|
 
   # Configure base box parameters
     config.vm.define "windows" do |windows|
-     #windows.vm.box = "windows/win2012r2"
      windows.vm.hostname="windows"
      windows.vm.box = "https://storage.googleapis.com/sc-ansible/windows.box"
-     #windows.vm.guest = :windows
-     config.vm.communicator = :winrm
+     windows.vm.guest = :windows
+     windows.vm.network :private_network, ip: "10.0.0.8"
 
      # Port forward WinRM and RDP
+     windows.vm.communicator = :winrm
+     windows.winrm.username = 'vagrant'
+     windows.winrm.password = 'vagrant'
      windows.vm.network :forwarded_port, guest: 3389, host: 3389
      windows.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
    end
