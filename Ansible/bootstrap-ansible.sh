@@ -37,3 +37,8 @@ cat >> /etc/ansible/hosts <<EOL
 10.0.0.9
 
 EOL
+
+# Copy Ansible playbooks into the master node
+cp -r /vagrant/playbooks /home/vagrant/
+chown -R vagrant:vagrant /home/vagrant/playbooks/ 
+chmod -R 775 /home/vagrant/playbooks/
